@@ -5,6 +5,7 @@
 # gpio.setmode(gpio.BOARD)
 # gpio.setup(LED_PIN, gpio.OUT)
 import bot
+import multi_led
 
 def toggle_led(on):
     #gpio.output(LED_PIN, on)
@@ -14,7 +15,8 @@ def toggle_led(on):
 #recieving message
 def send_message(text):
     print "messsage is : " + str(text)
-    bot.executeParser(text)
+    #bot.executeParser(text)
+    multi_led.executeDevices(text)
 
 
 #sending message
